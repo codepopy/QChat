@@ -7,10 +7,10 @@ import { error } from "console";
 
 //utility for production to make it easier to degbug
 function getGoogleCred(){
-    const clientId = process.env.GOOGLE_CLIENT_ID
-    const clientSecret = process.env.GOOGLE_CLIENT_SECRET
+    const clientId = process.env.GOOGLE_CLIENT_ID as string
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET as string
 
-    if(!clientId || clientId.length=== 0 ){
+    if(!clientId || clientId.length === 0 ){
         throw new Error('Missing GOOGLE_CLIENT_ID')
     }
     if(!clientSecret || clientSecret.length === 0 ){
